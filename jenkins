@@ -1,22 +1,24 @@
-node{
-
-		stage('Build'){
-
-				echo "Build Successfully........."	}
-        
-                stage('Deploy'){
-
-				echo "Deploy Successfully........."	}
-        
-                stage('Test'){
-
-				echo "Tested Successfully........."	}
-        
-		stage('Release'){
-
-				echo "Release Successfully........."	}
-
-
-
-
+pipeline{
+agent any
+stages 
+{
+stage('Build') 
+{
+steps{
+echo "Building the Project.........."
+}
+}
+stage('Test') 
+{
+steps{
+echo "Testing the Project.........."
+}
+}
+stage('Deploy') 
+{
+steps{
+echo "Deploying the Project.........."
+}
+}
+}
 }
